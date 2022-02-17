@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+
+<div th:switch="${order.purpose}">
+    <p th:case="GIFT">Les services des douanes nous informent qu'il manque la facture proforma correspondant au contenu de votre envoi <span th:text="${ order.trackingInfos }"></span>. Le colis est donc retenu en douane.</p>
+    <p th:case="*">Les services des douanes nous informent qu'il manque la facture commerciale correspondant au contenu de votre envoi <span th:text="${ order.trackingInfos }"></span>. Le colis est donc retenu en douane.</p>
+</div>
+
+<p><br></p>
+<p>Merci donc de m'envoyer votre facture commerciale dans les meilleurs délais. En l'absence de ce document, le colis vous sera retourné et les frais d'envoi vous serront facturés.</p>
+<p><br></p>
+<p>Je reste à votre disposition pour tout complément d’information.</p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+<p>Je vous conctate pour vous informer que votre envoi n°  <span th:text="${ order.trackingInfos }"></span> n'a pas pu être livré car l'adresse indiquée sur le bordereau est incomplète ou erronée:</p>
+<p><br></p>
+<p><strong> <span th:text="${order.recipient.address.line1 }"></span>, <span th:text="${ order.recipient.address.city  }"></span> <span th:text="${ order.recipient.address.postalCode }"></span></strong></p>
+<p><br></p>
+<p>Afin de poursuivre l'acheminement, pouvez-vous me confirmer le bonne adresse de livraison ou m'apporter toute autre information complémentaire nécessaire (numéro de téléphone local de préférence, complément d'information sur l'adresse, ...)?</p>
+<br>
+<p>Sans réponse de votre part au terme du délai d'instance, cet envoi vous sera retourné à vos frais.</p>
+</body>
+</html>

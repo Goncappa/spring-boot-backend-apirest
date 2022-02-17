@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+<p>Je vous contacte au sujet de votre envoi n° <span th:text="${ order.trackingInfos }"></span>.  Elle était bloquée informatiquement suite à une erreur dans le choix du pays de destination.</p>
+<p><br></p>
+<p>Pour les envois à destination pays dans l'adresse de destination de <span th:text="${ order.recipient.address.countryCode }"></span> il faut choisir comme pays de destination ***** et non pas ****.</p>
+<p><br></p>
+<p>Il n'est pas possible de modifier les pays de destination dans une commande. J'ai dû donc procéder à l'annulation de votre commande.</p>
+<p><br></p>
+<p>Vous serez remboursés de cette commande annulée sous 72h  via le même moyen de paiement ou sous la forme d'un avoir sur votre prochaine facture.</p>
+<p><br></p>
+<p>Je vous invite à repasser votre commande en choisissant le bon pays de destination.</p>
+<p><br></p>
+<p>Je reste à votre disposition pour tout complément d’information.</p>
+</body>
+</html>
