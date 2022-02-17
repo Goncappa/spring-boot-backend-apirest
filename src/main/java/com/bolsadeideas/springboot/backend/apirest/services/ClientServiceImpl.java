@@ -2,6 +2,7 @@ package com.bolsadeideas.springboot.backend.apirest.services;
 
 import java.util.List;
 
+import com.bolsadeideas.springboot.backend.apirest.models.OutBound.Motif;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,6 +12,8 @@ import com.bolsadeideas.springboot.backend.apirest.models.entity.Client;
 
 @Service
 public class ClientServiceImpl implements IClientService {
+
+	Motif[] motifsM = Motif.values();
 
 	@Autowired
 	private IClientDao clientDao;

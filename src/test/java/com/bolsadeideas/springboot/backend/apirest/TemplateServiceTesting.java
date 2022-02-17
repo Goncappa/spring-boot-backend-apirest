@@ -11,6 +11,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Arrays;
+import java.util.List;
+
 
 @Slf4j
 @SpringBootTest
@@ -45,8 +48,8 @@ public class TemplateServiceTesting {
 
     @Test
     void run123421() {
-        Motif[] getMotifs = Motif.values();
-        System.out.println("- My List of motifs is : " + getMotifs);
+        List<Motif> motifs = Arrays.asList(Motif.values());
+        System.out.println("- My List of motifs is : " + motifs);
     }
 
 

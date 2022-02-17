@@ -1,6 +1,7 @@
 package com.bolsadeideas.springboot.backend.apirest.controllers;
 
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -21,6 +22,8 @@ import static java.lang.String.format;
 @RestController
 @RequestMapping("/api")
 public class ClientRestController {
+
+	List<Motif> motifs = Arrays.asList(Motif.values());
 
 	@Autowired
 	private RequestOutboundService requestOutboundService;
@@ -68,6 +71,11 @@ public class ClientRestController {
 																@ModelAttribute ShippingOrder order,
 																@RequestHeader Motif motif) {
 		return ResponseEntity.ok(requestOutboundService.getOutboundTemplate(motif, agent, order));
+	}
+
+	@GetMapping("/motifs")
+	private List<Motif> motifs() {
+		return Arrays.asList(Motif.values());
 	}
 
 
